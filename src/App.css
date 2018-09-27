@@ -39,6 +39,9 @@ body, .app {
 .bookshelf-title {
   border-bottom: 1px solid #dedede;
 }
+.bookshelf-sub-title {
+  color: grey;
+}
 .bookshelf-books {
   text-align: center;
 }
@@ -171,4 +174,22 @@ body, .app {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+
+/* Empty book shelf */
+img.empty-shelf-img {
+  max-width: 100px;
+}
+
+.empty-shelf-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.empty-shelf-description {
+    margin-left: 1em;
 }

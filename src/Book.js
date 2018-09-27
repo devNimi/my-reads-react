@@ -4,7 +4,7 @@ class Book extends Component {
   constructor(props) {
      super(props);
      this.state = {
-      'value': this.props.bookDetails.shelf,
+      'value': this.props.bookDetails.shelf === undefined ? 'none' : this.props.bookDetails.shelf
      };
    }
   // onClick(someParam) {
@@ -13,7 +13,6 @@ class Book extends Component {
 
   changeBookStatus(event, updatedBook) {
     this.setState({value: event.target.value});
-    console.log(updatedBook);
     this.props.handleShelfChange(updatedBook, event.target.value);
   }
 
@@ -33,7 +32,7 @@ class Book extends Component {
           </div>
         </div>
         <div className="book-title">{this.props.bookDetails.title}</div>
-        <div className="book-authors">{this.props.bookDetails.authors[0]}</div>
+        <div className="book-authors">{this.props.bookDetails.authors}</div>
       </div>
     );
   }
